@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import axios from 'axios'
 
 export default function Home() {
+  function serverless(value){
+    axios.get(`/api/${value}`).then((res) => { console.log(res.data); }).catch((error) => { console.log(error); });
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -13,9 +17,22 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Vercel Serverless Test!</a>
         </h1>
-
+      <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', flexWrap: 'wrap', padding: '5px 0' }}>
+        <button onClick={()=>serverless("hello")}>func hello</button>
+        <button onClick={()=>serverless("func1")}>func 1</button>
+        <button onClick={()=>serverless("func2")}>func 2</button>
+        <button onClick={()=>serverless("func3")}>func 3</button>
+        <button onClick={()=>serverless("func4")}>func 4</button>
+        <button onClick={()=>serverless("func5")}>func 5</button>
+        <button onClick={()=>serverless("func6")}>func 6</button>
+        <button onClick={()=>serverless("func7")}>func 7</button>
+        <button onClick={()=>serverless("func8")}>func 8</button>
+        <button onClick={()=>serverless("func9")}>func 9</button>
+        <button onClick={()=>serverless("func10")}>func 10</button>
+        <button onClick={()=>serverless("func11")}>func 11</button>
+      </div>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
