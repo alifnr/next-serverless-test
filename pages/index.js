@@ -32,6 +32,7 @@ export default function Home() {
         <button onClick={()=>serverless("func9")}>func 9</button>
         <button onClick={()=>serverless("func10")}>func 10</button>
         <button onClick={()=>serverless("func11")}>func 11</button>
+        <button onClick={()=>serverless("func12")}>func 12</button>
       </div>
         <p className={styles.description}>
           Get started by editing{' '}
